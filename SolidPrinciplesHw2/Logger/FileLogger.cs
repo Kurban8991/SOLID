@@ -10,6 +10,7 @@
             }
 
             sw.WriteLine(message);
+            Dispose();
         }
 
         public void Dispose()
