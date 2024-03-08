@@ -14,7 +14,7 @@ namespace SolidPrinciplesHw2
             HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
             builder.Configuration.AddJsonFile("appsettings.json", false);
             builder.Services.AddTransient<MyGenerator>();
-            builder.Services.AddTransient<ILogger, ConsoleLogger>();
+            builder.Services.AddTransient<Logger.Logger, SinkConsoleLogger>();
             builder.Services.AddTransient<Worker>();
             builder.Services.Configure<GameRulesSetting>(builder.Configuration.GetSection(GameRulesSetting.GameRules));
 
